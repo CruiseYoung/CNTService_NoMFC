@@ -426,9 +426,8 @@ CNTService::CNTService(LPCTSTR lpszServiceName, LPCTSTR lpszDisplayName, DWORD d
   Initialize(lpszServiceName, lpszDisplayName, dwControlsAccepted, lpszDescription);
 
   //////////////////////////////////////////////////////////////////////////
-
 #if 0
-  TCHAR tzFileName[_MAX_PATH] = { 0 };;
+  TCHAR tzFileName[_MAX_PATH] = { 0 };
   //ZeroMemory(tzFileName, MAX_PATH);
   ::GetModuleFileName(NULL, tzFileName, MAX_PATH);
   //PathStripPath(tzFileName);
