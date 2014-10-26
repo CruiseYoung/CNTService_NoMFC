@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+ï»¿// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,13 +13,13 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Ó¢Óï(ÃÀ¹ú) resources
+// English (U.S.) resources
 
 //#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-//#ifdef _WIN32
+//#ifdef _WIN32  
 //LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //#pragma code_page(1252)
-//#endif //_WIN32
+//#endif //_WIN32 
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -73,7 +73,7 @@ BEGIN
             VALUE "FileDescription", "TestSrv - a sample NT Service implemented using CNTService"
             VALUE "FileVersion", "1.80.0.0"
             VALUE "InternalName", "TestSrv"
-            VALUE "LegalCopyright", "Copyright ? 1998 - 2014 PJ Naughter"
+            VALUE "LegalCopyright", "Copyright Â© 1998 - 2014 PJ Naughter"
             VALUE "OriginalFilename", "TestSrv.exe"
             VALUE "ProductName", "TestSrv NT Service"
             VALUE "ProductVersion", "1.80.0.0"
@@ -162,7 +162,7 @@ BEGIN
                             "CNTService::SetServiceToStatus, Failed to check the service status, Error:%1"
 END
 
-//#endif    // Ó¢Óï(ÃÀ¹ú) resources
+//#endif    // English (U.S.) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
