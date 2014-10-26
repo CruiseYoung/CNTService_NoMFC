@@ -13,13 +13,13 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(简体，中国) resources
+// 英语(美国) resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-#ifdef _WIN32
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
-#pragma code_page(936)
-#endif //_WIN32
+//#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+//#ifdef _WIN32
+//LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+//#pragma code_page(1252)
+//#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -67,7 +67,7 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "080404b0"
+        BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "PJ Naughter"
             VALUE "FileDescription", "TestSrv - a sample NT Service implemented using CNTService"
@@ -81,7 +81,7 @@ BEGIN
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x804, 1200
+        VALUE "Translation", 0x409, 1200
     END
 END
 
@@ -91,7 +91,7 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_NTSERV_INSTALL_FAIL_OPEN_SCM 
                             "CNTService::Install, Failed call to open SCM, Error:%1"
@@ -123,24 +123,23 @@ BEGIN
                             "CNTService::Uninstall, Failed call to WaitForStop, Error:%1"
     IDS_NTSERV_UNINSTALL_FAIL_DELETE_SERVICE 
                             "CNTService::Uninstall, Failed call to DeleteService, Error:%1"
+END
+
+STRINGTABLE
+BEGIN
     IDS_NTSERV_UNINSTALL_FAIL_UNINSTALL_EVENTLOG_SOURCE 
                             "CNTService::Uninstall, Failed call to remove service as an event log source, Error:%1"
     IDS_NTSERV_UNINSTALL_FAIL_STOP 
                             "CNTService::Uninstall, Failed to stop service, Error:%1"
-    IDS_NTSERV_FAIL_START_SERVICE 
-                            "Failed to start the service, Error:%1"
-    IDS_NTSERV_FAIL_STOP_SERVICE 
-                            "Failed to stop the service, Error:%1"
+    IDS_NTSERV_FAIL_START_SERVICE "Failed to start the service, Error:%1"
+    IDS_NTSERV_FAIL_STOP_SERVICE "Failed to stop the service, Error:%1"
     IDS_NTSERV_FAIL_CONTINUE_SERVICE 
                             "Failed to continue the service, Error:%1"
-    IDS_NTSERV_FAIL_PAUSE_SERVICE 
-                            "Failed to pause the service, Error:%1"
-    IDS_NTSERV_FAIL_START_SERVICE5 
-                            "Failed to start the service, Error:%1"
+    IDS_NTSERV_FAIL_PAUSE_SERVICE "Failed to pause the service, Error:%1"
+    IDS_NTSERV_FAIL_START_SERVICE5 "Failed to start the service, Error:%1"
     IDS_NTSERV_FAIL_GET_MODULE_FILENAME 
                             "Failed in call to GetModuleFileName, Error:%1"
-    IDS_NTSERV_VERBOSE_ERROR_STRING 
-                            "%1, %2"
+    IDS_NTSERV_VERBOSE_ERROR_STRING "%1, %2"
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_OPEN_SCM 
                             "CNTService::SetServiceToStatus, Failed call to open SCM, Error:%1"
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_OPEN_SERVICE 
@@ -155,11 +154,15 @@ BEGIN
                             "CNTService::SetServiceToStatus, Failed to stop the service, Error:%1"
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_WAITFORCHANGE 
                             "CNTService::SetServiceToStatus, Failed to wait for the service to change state, Error:%1"
+END
+
+STRINGTABLE
+BEGIN
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_QUERYSTATUS 
                             "CNTService::SetServiceToStatus, Failed to check the service status, Error:%1"
 END
 
-#endif    // 中文(简体，中国) resources
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
