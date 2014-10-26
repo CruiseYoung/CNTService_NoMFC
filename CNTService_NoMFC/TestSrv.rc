@@ -162,7 +162,7 @@ BEGIN
                             "CNTService::SetServiceToStatus, Failed to check the service status, Error:%1"
 END
 
-#endif    // 英语(美国) resources
+//#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
