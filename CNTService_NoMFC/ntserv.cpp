@@ -429,7 +429,7 @@ CNTService::CNTService(LPCTSTR lpszServiceName, LPCTSTR lpszDisplayName, DWORD d
 #if 0
   TCHAR tzFileName[_MAX_PATH] = { 0 };
   //ZeroMemory(tzFileName, MAX_PATH);
-  ::GetModuleFileName(NULL, tzFileName, MAX_PATH);
+  ::GetModuleFileName(NULL, tzFileName, _MAX_PATH);
   //PathStripPath(tzFileName);
   //PathRemoveFileSpec(tzFileName);
 
