@@ -341,23 +341,23 @@ CMyService::CMyService() : CNTService(_T("PJSERVICE"), _T("PJ's Demo NT Service"
 
 void CMyService::ServiceMain(DWORD /*dwArgc*/, LPTSTR* /*lpszArgv*/)
 {
-    CNTServiceString strSrvName = GetServiceName(); 
+  CNTServiceString strSrvName = GetServiceName(); 
 #ifdef CNTSERVICE_MFC_EXTENSIONS
-    CNTServiceString strpath = GetWindowsServiceInstallPath(strSrvName.GetBuffer(strSrvName.GetLength()), NULL, NULL);
-    strSrvName.ReleaseBuffer();
-    //strpath.Append(_T("\\cfg\\log4cplus.properties"));
-    //logger.StartSystem(strpath.GetBuffer(strpath.GetLength()));
-    //strpath.ReleaseBuffer();
+  CNTServiceString strpath = GetWindowsServiceInstallPath(strSrvName.GetBuffer(strSrvName.GetLength()), NULL, NULL);
+  strSrvName.ReleaseBuffer();
+  //strpath.Append(_T("\\cfg\\log4cplus.properties"));
+  //logger.StartSystem(strpath.GetBuffer(strpath.GetLength()));
+  //strpath.ReleaseBuffer();
 
-    SetCurrentDirectory(strpath.GetBuffer(strpath.GetLength()));
-    strpath.ReleaseBuffer();
+  SetCurrentDirectory(strpath.GetBuffer(strpath.GetLength()));
+  strpath.ReleaseBuffer();
 #else
-    CNTServiceString strpath = GetWindowsServiceInstallPath(strSrvName.c_str(), NULL, NULL);
-    //strpath.append(_T("\\cfg\\log4cplus.properties"));
-    //logger.StartSystem(strpath.c_str());
-    SetCurrentDirectory(strpath.c_str());
-
+  CNTServiceString strpath = GetWindowsServiceInstallPath(strSrvName.c_str(), NULL, NULL);
+  //strpath.append(_T("\\cfg\\log4cplus.properties"));
+  //logger.StartSystem(strpath.c_str());
+  SetCurrentDirectory(strpath.c_str());
 #endif
+
   //Pretend that starting up takes some time
   ReportStatus(SERVICE_START_PENDING, 1, 1100);
   Sleep(1000);

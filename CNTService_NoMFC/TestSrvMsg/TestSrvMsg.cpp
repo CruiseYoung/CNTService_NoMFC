@@ -3,9 +3,9 @@
 
 BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID /*lpReserved*/)
 {
-    if (dwReason == DLL_PROCESS_ATTACH)
-        DisableThreadLibraryCalls(hInstance);
-    return TRUE;
+  if (dwReason == DLL_PROCESS_ATTACH)
+    DisableThreadLibraryCalls(hInstance);
+  return TRUE;
 }
 
 //The following function is provided to ensure that a .lib file

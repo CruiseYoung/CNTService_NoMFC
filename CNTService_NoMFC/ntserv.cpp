@@ -1281,51 +1281,51 @@ BOOL CNTService::GetServiceProfileBinary(LPCTSTR lpszService, LPCTSTR lpszSectio
 // creating it if it doesn't exist
 CNTServiceString CNTService::GetWindowsServiceInstallPath(LPCTSTR lpszServiceName, LPCTSTR lpszDefault, DWORD* pLastError)
 {
-    //Validate our parameters
-    ATLASSUME(lpszServiceName != NULL);
+  //Validate our parameters
+  ATLASSUME(lpszServiceName != NULL);
 
-    if (pLastError)
-        *pLastError = ERROR_SUCCESS;
+  if (pLastError)
+    *pLastError = ERROR_SUCCESS;
 
-    ATL::CRegKey servicesKey;
-    LONG lResult = servicesKey.Open(HKEY_LOCAL_MACHINE, _T("SYSTEM\\CurrentControlSet\\Services"), KEY_READ);
+  ATL::CRegKey servicesKey;
+  LONG lResult = servicesKey.Open(HKEY_LOCAL_MACHINE, _T("SYSTEM\\CurrentControlSet\\Services"), KEY_READ);
+  if (lResult == ERROR_SUCCESS)
+  {
+    //Create the service key
+    ATL::CRegKey serviceKey;
+    lResult = serviceKey.Create(servicesKey, lpszServiceName, REG_NONE, REG_OPTION_NON_VOLATILE, KEY_READ, NULL);
     if (lResult == ERROR_SUCCESS)
     {
-        //Create the service key
-        ATL::CRegKey serviceKey;
-        lResult = serviceKey.Create(servicesKey, lpszServiceName, REG_NONE, REG_OPTION_NON_VOLATILE, KEY_READ, NULL);
-        if (lResult == ERROR_SUCCESS)
-        {
-            CNTServiceString sValue;
-            DWORD dwType = 0;
-            ULONG nBytes = 0;
-            LPCTSTR lpszEntry = _T("ImagePath");
-            lResult = serviceKey.QueryValue(lpszEntry, &dwType, NULL, &nBytes);
-            if (lResult == ERROR_SUCCESS)
-            {
-                ULONG nChars = nBytes / sizeof(TCHAR);
+      CNTServiceString sValue;
+      DWORD dwType = 0;
+      ULONG nBytes = 0;
+      LPCTSTR lpszEntry = _T("ImagePath");
+      lResult = serviceKey.QueryValue(lpszEntry, &dwType, NULL, &nBytes);
+      if (lResult == ERROR_SUCCESS)
+      {
+        ULONG nChars = nBytes / sizeof(TCHAR);
 #ifdef CNTSERVICE_MFC_EXTENSIONS
-                lResult = serviceKey.QueryStringValue(lpszEntry, sValue.GetBuffer(nChars), &nChars);
-                sValue.ReleaseBuffer();
-                sValue.Delete(sValue.ReverseFind('\\'));
+        lResult = serviceKey.QueryStringValue(lpszEntry, sValue.GetBuffer(nChars), &nChars);
+        sValue.ReleaseBuffer();
+        sValue.Delete(sValue.ReverseFind('\\'));
 #else
-                sValue.resize(nChars + 1);
-                lResult = serviceKey.QueryStringValue(lpszEntry, &(sValue[0]), &nChars);
-                sValue.erase(sValue.begin() + sValue.find_last_of('\\'), sValue.end());
+        sValue.resize(nChars + 1);
+        lResult = serviceKey.QueryStringValue(lpszEntry, &(sValue[0]), &nChars);
+        sValue.erase(sValue.begin() + sValue.find_last_of('\\'), sValue.end());
 #endif
-            }
+      }
 
-            if (lResult == ERROR_SUCCESS)
-                return sValue;
-        }
-        serviceKey.Close();
+      if (lResult == ERROR_SUCCESS)
+        return sValue;
     }
-    servicesKey.Close();
+    serviceKey.Close();
+  }
+  servicesKey.Close();
 
-    if (pLastError)
-        *pLastError = lResult;
+  if (pLastError)
+    *pLastError = lResult;
 
-    return CNTServiceString((lpszDefault == NULL) ? _T("") : lpszDefault);
+  return CNTServiceString((lpszDefault == NULL) ? _T("") : lpszDefault);
 }
 
 // returns key for:
