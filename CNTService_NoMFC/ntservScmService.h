@@ -1,4 +1,4 @@
-/*
+﻿/*
 Module : NTSERVSCMSERVICE.H
 Purpose: Defines the interface for the class CNTScmService.
 Created: PJN / 14-07-1998

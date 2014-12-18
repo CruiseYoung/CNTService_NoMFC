@@ -1,4 +1,4 @@
-#include "ntserv.h"
+﻿#include "ntserv.h"
 #include "ntservServiceControlManager.h"
 
 class CMyService : public CNTService

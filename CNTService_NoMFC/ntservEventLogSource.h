@@ -1,4 +1,4 @@
-/*
+﻿/*
 Module : NTSERVEVENTLOGSOURCE.H
 Purpose: Defines the interface for the class CNTEventLogSource.
 Created: PJN / 14-07-1998

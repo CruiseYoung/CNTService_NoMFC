@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
+﻿Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestSrv", "TestSrv.vcproj", "{8DAB6759-57B3-4B59-A1FA-6E4272E10F2E}"
 	ProjectSection(ProjectDependencies) = postProject

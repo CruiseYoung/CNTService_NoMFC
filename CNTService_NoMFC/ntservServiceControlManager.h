@@ -1,4 +1,4 @@
-/*
+﻿/*
 Module : NTSERVSERVICECONTROLMANAGER.H
 Purpose: Defines the interface for the class CNTServiceControlManager. 
 Created: PJN / 14-07-1998

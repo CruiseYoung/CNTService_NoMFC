@@ -1,4 +1,4 @@
-/*  
+﻿/*  
 Module : NTSERVEVENTLOG.CPP
 Purpose: Implementation for the class CNTEventLog
 Created: PJN / 14-07-1997

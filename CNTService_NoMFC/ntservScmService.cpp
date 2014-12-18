@@ -1,4 +1,4 @@
-/*  
+﻿/*  
 Module : NTSERVSCMSERVICE.CPP
 Purpose: Implementation for the class CNTScmService
 Created: PJN / 14-07-1997

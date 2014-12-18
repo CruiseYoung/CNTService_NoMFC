@@ -1,4 +1,4 @@
-/*  
+﻿/*  
 Module : NTSERVSERVICECONTROLMANAGER.CPP
 Purpose: Implementation for the class CNTServiceControlManager
 Created: PJN / 14-07-1997

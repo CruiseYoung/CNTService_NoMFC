@@ -1,4 +1,4 @@
-//#include "stdafx.h"
+﻿//#include "stdafx.h"
 #include "ntserv_msg.h"
 #include "ntservEventLog.h"
 #include "app.h"

@@ -1,4 +1,4 @@
-/*  
+ï»¿/*  
 Module : NTSERV.CPP
 Purpose: Implementation for an MFC class framework which encapsulate the whole area of Windows services
 Created: PJN / 14-07-1997
@@ -1274,7 +1274,7 @@ BOOL CNTService::GetServiceProfileBinary(LPCTSTR lpszService, LPCTSTR lpszSectio
 }
 
 /*
-¡¡¡¡Windows·şÎñÔÚÏµÍ³°²×°ºó»áÔÚ×¢²á±íµÄ "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\[ServiceName]"ÏÂÒÔ·şÎñµÄServiceName½¨1¸öÄ¿Â¼£¬Ä¿Â¼ÖĞ»áÓĞ"ImagePath"½Ú£¬ÕâÀï±£´æµÄ¾ÍÊÇ¸Ã·şÎñµÄ°²×°Â·¾¶¡£
+ã€€ã€€WindowsæœåŠ¡åœ¨ç³»ç»Ÿå®‰è£…åä¼šåœ¨æ³¨å†Œè¡¨çš„ "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\[ServiceName]"ä¸‹ä»¥æœåŠ¡çš„ServiceNameå»º1ä¸ªç›®å½•ï¼Œç›®å½•ä¸­ä¼šæœ‰"ImagePath"èŠ‚ï¼Œè¿™é‡Œä¿å­˜çš„å°±æ˜¯è¯¥æœåŠ¡çš„å®‰è£…è·¯å¾„ã€‚
   */
 // returns key for:
 //      HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\[ServiceName]\ImagePath

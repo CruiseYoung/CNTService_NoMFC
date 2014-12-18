@@ -1,4 +1,4 @@
-/*
+﻿/*
 Module : NTSERV.H
 Purpose: Defines the interface for an MFC class framework which encapsulate the whole area of Windows services
 Created: PJN / 14-07-1998

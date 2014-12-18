@@ -1,4 +1,4 @@
-/*  
+﻿/*  
 Module : NTSERVCMDLINEINFO.CPP
 Purpose: Implementation for the class CNTServiceCommandLineInfo 
 Created: PJN / 14-07-1997

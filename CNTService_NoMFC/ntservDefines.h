@@ -1,4 +1,4 @@
-/*
+﻿/*
 Module : NTSERVDEFINES.H
 Purpose: Various defines which the class framework which requires
 Created: PJN / 08-09-2003
