@@ -123,10 +123,6 @@ BEGIN
                             "CNTService::Uninstall, Failed call to WaitForStop, Error:%1"
     IDS_NTSERV_UNINSTALL_FAIL_DELETE_SERVICE 
                             "CNTService::Uninstall, Failed call to DeleteService, Error:%1"
-END
-
-STRINGTABLE
-BEGIN
     IDS_NTSERV_UNINSTALL_FAIL_UNINSTALL_EVENTLOG_SOURCE 
                             "CNTService::Uninstall, Failed call to remove service as an event log source, Error:%1"
     IDS_NTSERV_UNINSTALL_FAIL_STOP 
@@ -154,10 +150,6 @@ BEGIN
                             "CNTService::SetServiceToStatus, Failed to stop the service, Error:%1"
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_WAITFORCHANGE 
                             "CNTService::SetServiceToStatus, Failed to wait for the service to change state, Error:%1"
-END
-
-STRINGTABLE
-BEGIN
     IDS_NTSERV_SETSERVICETOSTATUS_FAIL_QUERYSTATUS 
                             "CNTService::SetServiceToStatus, Failed to check the service status, Error:%1"
 END
